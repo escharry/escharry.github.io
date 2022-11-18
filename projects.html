@@ -1,0 +1,59 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(window).scroll( function(){
+                    $('.fadein').each( function(i) {
+                        var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+                        var bottom_of_window = $(window).scrollTop() + $(window).height();
+                        if ( bottom_of_window > bottom_of_element ){
+                            $(this).animate({'opacity':'1'},500);
+                        }
+            
+                    }); 
+                });
+            });
+            $(document).ready(function () {
+                $('div.hidden').fadeIn(500).removeClass('hidden');
+            });
+        </script>
+        <div class="hidden" style="display: none;">
+            <h1>Gitlet</h1>
+        <figure>
+            <img src='/assets/gitlet.gif' alt='gitlet' vspace = "20" style="border-radius: 7px;"/>
+            <figcaption>
+                Command line version control system implementing essential features of Git. Supports the reading and writing of files, viewing their histories, branching to enable separate workflows, and merging of these branches back into master.
+            </figcaption>
+        </figure>
+        <img vspace = "10">
+        </div>
+        <h1 class="fadein" style="opacity: 0;">2048</h1>
+        <figure>
+            <img src='/assets/2048.gif' alt='2048' vspace="20"
+                width="350" height="400" class="fadein" style="display: block;
+                                                margin-left: auto;
+                                                margin-right: auto;
+                                                width: 50%;
+                                                border-radius: 10px;
+                                                opacity: 0;"/>
+            <figcaption class="fadein" style="opacity: 0;">
+                Core logic of the game 2048, a single-player computer game written by Gabriele Cirulli, including the handling of a variety of possible key-presses input by the player and their effects on aspects of the game including score, board layout and tile values.
+            </figcaption>
+        </figure>
+        <img vspace = "10">
+        <h1 class="fadein" style="opacity: 0;">2D Tile World Generator</h1>
+        <figure>
+            <img src='/assets/2dtile.gif' alt='2dtile' class="fadein" vspace = "20" style="border-radius: 10px; opacity: 0;"/>
+            <figcaption class="fadein" style="opacity: 0;">
+                Engine for generating random, explorable worlds in which the user is able to navigate via WASD keys and interact with objects.
+            </figcaption>
+        </figure>
+    </head>
+</html>

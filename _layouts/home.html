@@ -2,12 +2,31 @@
 layout: default
 ---
 
-<div class="home">
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('div.hidden').fadeIn(500).removeClass('hidden');
+      });
+    </script>
+  </head>
+<body>
+  <div class="hidden" style="display: none; text-align: center; padding-top: 20%;">
+    <h1>Esteban Charry</h1>
+
+  </div>
+</body>
+</html>
+
+
+
+<!-- <div class="home">
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-  {{ content }}
+  {{ content }} -->
 
   <!-- {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
@@ -31,4 +50,4 @@ layout: default
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%} -->
 
-</div>
+<!-- </div> -->
