@@ -17,10 +17,17 @@
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
-
+  -webkit-transition: 0.8s;
+  transtion: color 0.1s;
+  
   &,
   &:visited {
     color: $grey-color-dark;
+  }
+  &:hover {
+    // color: $brand-color;
+    color: $grey-color;
+    text-decoration: none;
   }
 }
 
@@ -37,12 +44,18 @@
   }
 
   .page-link {
-    color: $text-color;
+    color: $grey-color-dark;
     line-height: $base-line-height;
+    -webkit-transition: 0.8s;
+    transtion: color 0.1s;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 20px;
+    }
+    &:hover {
+      color: $grey-color;
+      text-decoration: none;
     }
   }
 
@@ -252,4 +265,40 @@
       @include relative-font-size(1.125);
     }
   }
+}
+
+.u-email {
+  color: $grey-color;
+  -webkit-transition: 0.8s;
+  transtion: color 0.1s;
+  
+  &,
+  &:visited {
+    color: $grey-color-dark;
+  }
+  &:hover {
+    // color: $brand-color;
+    color: $grey-color;
+    text-decoration: none;
+  }
+}
+
+.soc {
+  color: $grey-color;
+  -webkit-transition: 0.8s;
+  transtion: color 0.1s;
+  
+  &,
+  &:visited {
+    color: $grey-color-dark;
+  }
+  &:hover {
+    // color: $brand-color;
+    color: $grey-color;
+    text-decoration: none;
+  }
+}
+
+.title {
+  color: $grey-color-dark;
 }
