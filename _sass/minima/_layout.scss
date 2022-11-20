@@ -29,6 +29,9 @@
     color: $grey-color;
     text-decoration: none;
   }
+  &:active {
+    color: black;
+  }
 }
 
 .site-nav {
@@ -56,6 +59,9 @@
     &:hover {
       color: $grey-color;
       text-decoration: none;
+    }
+    &:active {
+      color: black;
     }
   }
 
@@ -281,6 +287,9 @@
     color: $grey-color;
     text-decoration: none;
   }
+  &:active {
+    color: black;
+  }
 }
 
 .soc {
@@ -297,8 +306,31 @@
     color: $grey-color;
     text-decoration: none;
   }
+  &:active {
+    color: black;
+  }
 }
 
 .title {
   color: $grey-color-dark;
+}
+
+.spec {
+  color: black;
+  -webkit-transition: 0.8s;
+  transtion: color 0.1s;
+  font-weight: 600;
+
+  &,
+  &:visited {
+    color: $grey-color-dark;
+  }
+  &:hover {
+    // color: $brand-color;
+    color: $grey-color;
+    text-decoration: none;
+  }
+  &:active {
+    color: black;
+  }
 }

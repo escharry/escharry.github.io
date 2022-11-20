@@ -10,7 +10,7 @@ permalink: /projects/
         <script>
             // sequential fade in
             $(document).ready(function() { 
-                $('#proj1, #proj2, #proj3').each(function(hidden) {
+                $('#note, #proj1, #proj2, #proj3').each(function(hidden) {
                     $(this).delay(hidden * 200).fadeIn(200);
                 });
             });
@@ -66,6 +66,10 @@ permalink: /projects/
         //         });
         //     });
         </script>
+        <div class="hidden" id="note" style="display: none;">
+            <b>Note</b>: School projects will not have code publicly available.
+        </div>
+        <img vspace = "10">
         <div class="hidden" id="proj1" style="display: none;">
             <h1>Gitlet</h1>
         <figure>
@@ -76,7 +80,10 @@ permalink: /projects/
                    width: 90%;
                    border-radius: 10px;"/>
             <figcaption>
-                Command line version control system implementing essential features of Git. Supports the reading and writing of files, viewing their histories, branching to enable separate workflows, and merging of these branches back into main.
+                Command line version control system implementing essential features of Git. Supports the reading and writing of files, viewing their histories, branching to enable separate 
+                workflows, and merging of these branches back into main. 
+                <br>
+                <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj2/proj2">Spec ›</a>
             </figcaption>
         </figure>
         <img vspace = "10">
@@ -93,6 +100,8 @@ permalink: /projects/
                             "/>
                 <figcaption>
                     Core logic of the game 2048, a single-player computer game written by Gabriele Cirulli, including the handling of a variety of possible key-presses input by the player and their effects on aspects of the game including score, board layout and tile values.
+                    <br>
+                    <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj0/proj0">Spec ›</a>
                 </figcaption>
             </figure>
         </div>
@@ -109,6 +118,8 @@ permalink: /projects/
                        border-radius: 10px;"/>
                 <figcaption>
                     Engine for generating random, explorable worlds in which the user is able to navigate via WASD keys and interact with objects.
+                    <br>
+                    <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj3/proj3">Spec ›</a>
                 </figcaption>
             </figure>
         </div>
