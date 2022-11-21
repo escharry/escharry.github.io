@@ -19,16 +19,18 @@
   float: left;
   -webkit-transition: 0.8s;
   transtion: color 0.1s;
-  
+
   &,
   &:visited {
     color: $grey-color-dark;
   }
+
   &:hover {
     // color: $brand-color;
     color: $grey-color;
     text-decoration: none;
   }
+
   &:active {
     color: black;
   }
@@ -39,7 +41,7 @@
   line-height: $base-line-height * $base-font-size * 2.25;
 
   .nav-trigger {
-      display: none;
+    display: none;
   }
 
   .menu-icon {
@@ -56,10 +58,12 @@
     &:not(:last-child) {
       margin-right: 20px;
     }
+
     &:hover {
       color: $grey-color;
       text-decoration: none;
     }
+
     &:active {
       color: black;
     }
@@ -92,17 +96,17 @@
       padding-top: 10px;
       text-align: center;
 
-      > svg {
+      >svg {
         fill: $grey-color-dark;
       }
     }
 
-    input ~ .trigger {
+    input~.trigger {
       clear: both;
       display: none;
     }
 
-    input:checked ~ .trigger {
+    input:checked~.trigger {
       display: block;
       padding-bottom: 5px;
     }
@@ -114,6 +118,7 @@
       &:not(:last-child) {
         margin-right: 0;
       }
+
       margin-left: 20px;
     }
   }
@@ -155,29 +160,30 @@
 
 .footer-col-1 {
   width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-  width:         calc(35% - (#{$spacing-unit} / 2));
+  width: calc(35% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
   width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-  width:         calc(20% - (#{$spacing-unit} / 2));
+  width: calc(20% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
   width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-  width:         calc(45% - (#{$spacing-unit} / 2));
+  width: calc(45% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
+
   .footer-col-1,
   .footer-col-2 {
     width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-    width:         calc(50% - (#{$spacing-unit} / 2));
+    width: calc(50% - (#{$spacing-unit} / 2));
   }
 
   .footer-col-3 {
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
   }
 }
 
@@ -185,7 +191,7 @@
   .footer-col {
     float: none;
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
   }
 }
 
@@ -211,7 +217,7 @@
   margin-left: 0;
   list-style: none;
 
-  > li {
+  >li {
     margin-bottom: $spacing-unit;
   }
 }
@@ -277,16 +283,18 @@
   color: $grey-color;
   -webkit-transition: 0.8s;
   transtion: color 0.1s;
-  
+
   &,
   &:visited {
     color: $grey-color-dark;
   }
+
   &:hover {
     // color: $brand-color;
     color: $grey-color;
     text-decoration: none;
   }
+
   &:active {
     color: black;
   }
@@ -296,16 +304,18 @@
   color: $grey-color;
   -webkit-transition: 0.8s;
   transtion: color 0.1s;
-  
+
   &,
   &:visited {
     color: $grey-color-dark;
   }
+
   &:hover {
     // color: $brand-color;
     color: $grey-color;
     text-decoration: none;
   }
+
   &:active {
     color: black;
   }
@@ -325,12 +335,71 @@
   &:visited {
     color: $grey-color-dark;
   }
+
   &:hover {
     // color: $brand-color;
     color: $grey-color;
     text-decoration: none;
   }
+
   &:active {
     color: black;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.container {
+  padding-top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container p {
+  font-size: 3rem;
+  padding: 0.5rem;
+  // font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container p span.typed-text {
+  font-weight: normal;
+  color: black;
+}
+
+.container p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+
+.container p span.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+
+  49% {
+    background-color: #ccc;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+
+  99% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: #ccc;
   }
 }
