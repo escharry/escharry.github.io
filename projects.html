@@ -9,7 +9,6 @@ permalink: /projects/
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        // sequential fade in
         $(document).ready(function () {
             $('#note, #proj1, #proj2, #proj3, #proj4').each(function (hidden) {
                 $(this).delay(hidden * 200).fadeIn(200);
@@ -32,11 +31,11 @@ permalink: /projects/
                        width: 90%;
                        border-radius: 10px;" />
             <figcaption>
-                Command line version control system implementing essential features of Git. Supports the reading and
-                writing of files, viewing their histories, branching to enable separate
-                workflows, and merging of these branches back into main.
+                Command line version control system implementing essential features of Git. Implements the reading and
+                writing of files, viewing their histories, branching to enable separate workflows, and merging of these
+                branches back into main, all through the serializing and deserializing of objects.
                 <br>
-                <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj2/proj2">Spec ›</a>
+                <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj2/proj2">Spec›</a>
             </figcaption>
         </figure>
         <img vspace="10">
@@ -55,7 +54,7 @@ permalink: /projects/
                 handling of a variety of possible key-presses input by the player and their effects on aspects of the
                 game including score, board layout and tile values.
                 <br>
-                <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj0/proj0">Spec ›</a>
+                <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj0/proj0">Spec›</a>
             </figcaption>
         </figure>
     </div>
@@ -71,16 +70,17 @@ permalink: /projects/
                            border-radius: 10px;" />
             <figcaption>
                 Engine for generating random, explorable worlds in which the user is able to navigate via WASD keys and
-                interact with objects.
+                interact with objects. Worlds are generated using randomly situated rooms and connections via A* and
+                Manhattan distance as a metric.
                 <br>
-                <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj3/proj3">Spec ›</a>
+                <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj3/proj3">Spec›</a>
             </figcaption>
         </figure>
     </div>
     <div class="hidden" id="proj4" style="display: none;">
         <h1>SIXT33N: Voice Controlled Car</h1>
         <figure>
-            <img src='/img/car.png' alt='car' class="fadein" vspace="20" style="border-radius: 10px;
+            <img src='/assets/car.png' alt='car' class="fadein" vspace="20" style="border-radius: 10px;
                            display: block;
                            margin-left: auto;
                            margin-right: auto;
@@ -89,7 +89,8 @@ permalink: /projects/
             <figcaption>
                 Car that recognizes voice commands and responds accordingly. Uses a Texas Instruments microcontroller
                 and microphone to record sample voice commands, filter noise and erroneous input, and implements a
-                classifier based on principal component analysis to determine which command was said. This was a project
+                classifier based on singular value decomposition and principal component analysis to identify which
+                command was said. This was a project
                 for EECS 16B at UC Berkeley.
             </figcaption>
         </figure>
