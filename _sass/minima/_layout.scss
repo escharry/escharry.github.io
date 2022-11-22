@@ -372,7 +372,7 @@
 
 .container p span.cursor {
   display: inline-block;
-  background-color: #ccc;
+  background-color: #111;
   margin-left: 0.1rem;
   width: 3px;
   animation: blink 1s infinite;
@@ -405,7 +405,7 @@
 }
 
 body {
-	transition: background 0.2s linear;
+  transition: background 0.2s linear;
 }
 
 body.other {
@@ -413,98 +413,123 @@ body.other {
 }
 
 body.dark {
-	background: rgb(14, 16, 23);
+  background: rgb(14, 16, 23);
   color: rgb(144, 162, 136);
-  .spec {
-    color: rgb(144, 162, 136);
-    -webkit-transition: 0.8s;
-  transtion: color 0.1s;
-  font-weight: 600;
 
-  &,
-  &:visited {
-    color: rgb(144, 162, 136);
-  }
-
-  &:hover {
-    // color: $brand-color;
-    color: $grey-color;
-    text-decoration: none;
-  }
-
-  &:active {
-    color: black;
-  }
-
-  }
-  .u-email {
-    color: rgb(144, 162, 136);
-  }
-  .soc {
-    color: rgb(144, 162, 136);
-  }
-  .title {
-    color: rgb(144, 162, 136);
-  }
+  .soc,
+  .u-email,
+  .spec,
   .site-title {
     color: rgb(144, 162, 136);
+    -webkit-transition: 0.8s;
+    transtion: color 0.1s;
+
+    &,
+    &:visited {
+      color: rgb(144, 162, 136);
+    }
+
+    &:hover {
+      // color: $brand-color;
+      color: $grey-color;
+      text-decoration: none;
+    }
+
+    &:active {
+      color: rgb(64, 72, 68);
+    }
   }
+
+  .container p span.cursor {
+    background-color: rgb(144, 162, 136);
+  }
+
+  @keyframes blink {
+    0% {
+      background-color: rgb(144, 162, 136) !important;
+    }
+
+    49% {
+      background-color: rgb(144, 162, 136) !important;
+    }
+
+    50% {
+      background-color: transparent;
+    }
+
+    99% {
+      background-color: transparent;
+    }
+
+    100% {
+      background-color: rgb(144, 162, 136) !important;
+    }
+  }
+
   .page-link {
     color: rgb(144, 162, 136);
+
+    &:active {
+      color: rgb(64, 72, 68) !important;
+    }
   }
+
   .container p span.typed-text {
     font-weight: normal;
     color: rgb(144, 162, 136);
+
   }
+
   .site-header {
     border-top: 5px solid rgb(144, 162, 136);
     border-bottom: 1px solid rgb(144, 162, 136);
   }
+
   .site-footer {
     border-top: 1px solid rgb(144, 162, 136);
   }
 }
 
 .checkbox {
-	opacity: 0;
-	position: absolute;
+  opacity: 0;
+  position: absolute;
 }
 
 .label {
-	background-color: $grey-color-dark;
-	border-radius: 50px;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 5px;
-	position: relative;
-	height: 26px;
-	width: 50px;
-	transform: scale(1.5);
+  background-color: $grey-color-dark;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  transform: scale(1.5);
 }
 
 .label .ball {
-	background-color: #fff;
-	border-radius: 50%;
-	position: absolute;
-	top: 2px;
-	left: 2px;
-	height: 22px;
-	width: 22px;
-	transform: translateX(0px);
-	transition: transform 0.2s linear;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
 }
 
-.checkbox:checked + .label .ball {
-	transform: translateX(24px);
+.checkbox:checked+.label .ball {
+  transform: translateX(24px);
 }
 
 
 .fa-moon {
-	color: rgb(144, 162, 136);
+  color: rgb(144, 162, 136);
 }
 
 .fa-sun {
-	color: rgb(234, 191, 99);
+  color: rgb(234, 191, 99);
 }
