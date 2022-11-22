@@ -422,7 +422,7 @@ body.dark {
   .site-title {
     color: rgb(144, 162, 136);
     -webkit-transition: 0.8s;
-    transtion: color 0.1s;
+    transition: color 0.1s;
 
     &,
     &:visited {
@@ -430,7 +430,6 @@ body.dark {
     }
 
     &:hover {
-      // color: $brand-color;
       color: $grey-color;
       text-decoration: none;
     }
@@ -532,4 +531,19 @@ body.dark {
 
 .fa-sun {
   color: rgb(234, 191, 99);
+}
+
+#me {
+  background-image: url("/assets/me.jpg");
+  height: 200px;
+  width: 200px;
+  border-radius: 75%;   
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transition: 0.8s;
+}
+
+#me:hover {
+  background-image: url("/assets/cat.jpg");
 }
