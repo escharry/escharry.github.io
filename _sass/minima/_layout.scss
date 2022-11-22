@@ -414,31 +414,54 @@ body.other {
 
 body.dark {
 	background: rgb(14, 16, 23);
-  color: white;
+  color: rgb(144, 162, 136);
   .spec {
-    color: white;
+    color: rgb(144, 162, 136);
+    -webkit-transition: 0.8s;
+  transtion: color 0.1s;
+  font-weight: 600;
+
+  &,
+  &:visited {
+    color: rgb(144, 162, 136);
+  }
+
+  &:hover {
+    // color: $brand-color;
+    color: $grey-color;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: black;
+  }
+
   }
   .u-email {
-    color: white;
+    color: rgb(144, 162, 136);
   }
   .soc {
-    color: white;
+    color: rgb(144, 162, 136);
   }
   .title {
-    color: white;
+    color: rgb(144, 162, 136);
   }
   .site-title {
-    color: white;
+    color: rgb(144, 162, 136);
   }
   .page-link {
-    color: white;
+    color: rgb(144, 162, 136);
   }
   .container p span.typed-text {
     font-weight: normal;
-    color: white;
+    color: rgb(144, 162, 136);
   }
   .site-header {
-    border-top: 5px solid white;
+    border-top: 5px solid rgb(144, 162, 136);
+    border-bottom: 1px solid rgb(144, 162, 136);
+  }
+  .site-footer {
+    border-top: 1px solid rgb(144, 162, 136);
   }
 }
 
