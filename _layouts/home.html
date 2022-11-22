@@ -11,15 +11,45 @@ layout: default
       $('div.hidden').fadeIn(500).removeClass('hidden');
     });
   </script>
+  <script src="https://kit.fontawesome.com/f3a2794e84.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="home">
   <div class="hidden" style="display: none;">
     <div class="container">
       <p>Hi, I&#39m Esteban,<br><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
     </div>
   </div>
   <script src="type.js"></script>
+  <div style="display: flex;
+  justify-content: center; padding-top: 150px;">
+    <input type="checkbox" class="checkbox" id="chk" />
+    <label class="label" for="chk" style="box-sizing: border-box;">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+      <div class="ball"></div>
+    </label>
+  </div>
+  <script>
+    const chk = document.getElementById('chk');
+
+    chk.addEventListener('change', () => {
+      document.body.classList.toggle('dark');
+      if (document.body.classList.contains('dark')) { //when the body has the class 'dark' currently
+        localStorage.setItem('darkMode', 'enabled'); //store this data if dark mode is on
+      } else {
+        localStorage.setItem('darkMode', 'disabled'); //store this data if dark mode is off
+      }
+    });
+    if (localStorage.getItem('darkMode') == 'enabled') {
+      document.body.classList.toggle('dark');
+      document.getElementByClassName('typed-text').color = 'white';
+      chk.checked = true;
+    } else {
+      document.body.classList.remove('dark');
+      chk.checked = false;
+    }
+  </script>
 </body>
 
 </html>

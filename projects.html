@@ -16,6 +16,8 @@ permalink: /projects/
             });
         });
     </script>
+
+<body class="other">
     <div class="hidden" id="note" style="display: none;">
         <b>Note</b>: School projects will not have code publicly available.
     </div>
@@ -24,11 +26,11 @@ permalink: /projects/
         <h1>Gitlet</h1>
         <figure>
             <img src='/assets/gitlet.gif' alt='gitlet' vspace="20" style="border-radius: 7px; 
-                   display: block;
-                   margin-left: auto;
-                   margin-right: auto;
-                   width: 90%;
-                   border-radius: 10px;" />
+                       display: block;
+                       margin-left: auto;
+                       margin-right: auto;
+                       width: 90%;
+                       border-radius: 10px;" />
             <figcaption>
                 Command line version control system implementing essential features of Git. Supports the reading and
                 writing of files, viewing their histories, branching to enable separate
@@ -43,11 +45,11 @@ permalink: /projects/
         <h1>2048</h1>
         <figure>
             <img src='/assets/2048.gif' alt='2048' vspace="20" style="display: block;
-                            margin-left: auto;
-                            margin-right: auto;
-                            width: 50%;
-                            border-radius: 10px;
-                            " />
+                                margin-left: auto;
+                                margin-right: auto;
+                                width: 50%;
+                                border-radius: 10px;
+                                " />
             <figcaption>
                 Core logic of the game 2048, a single-player computer game written by Gabriele Cirulli, including the
                 handling of a variety of possible key-presses input by the player and their effects on aspects of the
@@ -62,11 +64,11 @@ permalink: /projects/
         <h1>2D Tile World Generator</h1>
         <figure>
             <img src='/assets/2dtile.gif' alt='2dtile' class="fadein" vspace="20" style="border-radius: 10px;
-                       display: block;
-                       margin-left: auto;
-                       margin-right: auto;
-                       width: 90%;
-                       border-radius: 10px;" />
+                           display: block;
+                           margin-left: auto;
+                           margin-right: auto;
+                           width: 90%;
+                           border-radius: 10px;" />
             <figcaption>
                 Engine for generating random, explorable worlds in which the user is able to navigate via WASD keys and
                 interact with objects.
@@ -79,11 +81,11 @@ permalink: /projects/
         <h1>SIXT33N: Voice Controlled Car</h1>
         <figure>
             <img src='/img/car.png' alt='car' class="fadein" vspace="20" style="border-radius: 10px;
-                       display: block;
-                       margin-left: auto;
-                       margin-right: auto;
-                       width: 90%;
-                       border-radius: 10px;" />
+                           display: block;
+                           margin-left: auto;
+                           margin-right: auto;
+                           width: 90%;
+                           border-radius: 10px;" />
             <figcaption>
                 Car that recognizes voice commands and responds accordingly. Uses a Texas Instruments microcontroller
                 and microphone to record sample voice commands, filter noise and erroneous input, and implements a
@@ -92,6 +94,17 @@ permalink: /projects/
             </figcaption>
         </figure>
     </div>
+    <script>
+        if (localStorage.getItem('darkMode') == 'enabled') {
+            document.body.classList.toggle('dark');
+            chk.checked = true;
+        } else {
+            document.body.classList.remove('dark');
+            chk.checked = false;
+        }
+    </script>
+</body>
+
 </head>
 
 </html>
