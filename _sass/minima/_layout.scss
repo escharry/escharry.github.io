@@ -532,18 +532,3 @@ body.dark {
 .fa-sun {
   color: rgb(234, 191, 99);
 }
-
-#me {
-  background-image: url("/assets/me.jpg");
-  height: 200px;
-  width: 200px;
-  border-radius: 75%;   
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-transition: 0.8s;
-}
-
-#me:hover {
-  background-image: url("/assets/cat.jpg");
-}
