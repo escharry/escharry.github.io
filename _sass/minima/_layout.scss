@@ -279,45 +279,24 @@
   }
 }
 
-.u-email {
+.soc, .username, .u-email {
   color: $grey-color;
-  -webkit-transition: 0.8s;
-  transtion: color 0.1s;
+  -webkit-transition: 0.8s !important;
+  transtion: color 0.1s !important;
 
   &,
   &:visited {
-    color: $grey-color-dark;
+    color: $grey-color-dark !important;
   }
 
   &:hover {
     // color: $brand-color;
-    color: $grey-color;
-    text-decoration: none;
+    color: $grey-color !important;
+    text-decoration: none !important;
   }
 
   &:active {
-    color: black;
-  }
-}
-
-.soc {
-  color: $grey-color;
-  -webkit-transition: 0.8s;
-  transtion: color 0.1s;
-
-  &,
-  &:visited {
-    color: $grey-color-dark;
-  }
-
-  &:hover {
-    // color: $brand-color;
-    color: $grey-color;
-    text-decoration: none;
-  }
-
-  &:active {
-    color: black;
+    color: black !important;
   }
 }
 
@@ -417,25 +396,26 @@ body.dark {
   color: rgb(144, 162, 136);
 
   .soc,
+  .username,
   .u-email,
   .spec,
   .site-title {
-    color: rgb(144, 162, 136);
+    color: rgb(144, 162, 136) !important;
     -webkit-transition: 0.8s;
     transition: color 0.1s;
 
     &,
     &:visited {
-      color: rgb(144, 162, 136);
+      color: rgb(144, 162, 136) !important;
     }
 
     &:hover {
-      color: $grey-color;
+      color: $grey-color !important;
       text-decoration: none;
     }
 
     &:active {
-      color: rgb(64, 72, 68);
+      color: rgb(64, 72, 68) !important;
     }
   }
 
