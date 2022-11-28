@@ -20,10 +20,10 @@
       href="https://instagram.com/{{ site.instagram_username| cgi_escape | escape }}"><svg class="svg-icon">
         <use xlink:href="{{ '/assets/minima-social-icons.svg#instagram' | relative_url }}"></use>
       </svg> <span class="username">{{ site.instagram_username| escape }}</span></a></li>{%- endif -%}
-  {%- if site.linkedin_username -%}<li><a
+  {%- if site.linkedin_username -%}<li><a class="soc"
       href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"><svg class="svg-icon">
         <use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use>
-      </svg> <span class="username">{{ site.linkedin_username| escape }}</span></a></li>{%- endif -%}
+      </svg><span class="username" style="text-decoration: none;">{{ site.linkedin_username| escape }}</span></a></li>{%- endif -%}
   {%- if site.pinterest_username -%}<li><a
       href="https://www.pinterest.com/{{ site.pinterest_username| cgi_escape | escape }}"><svg class="svg-icon">
         <use xlink:href="{{ '/assets/minima-social-icons.svg#pinterest' | relative_url }}"></use>

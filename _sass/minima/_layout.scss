@@ -18,7 +18,6 @@
   margin-bottom: 0;
   float: left;
   -webkit-transition: 0.8s;
-  transtion: color 0.1s;
 
   &,
   &:visited {
@@ -52,7 +51,6 @@
     color: $grey-color-dark;
     line-height: $base-line-height;
     -webkit-transition: 0.8s;
-    transtion: color 0.1s;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
@@ -279,24 +277,25 @@
   }
 }
 
-.soc, .username, .u-email {
+.soc,
+.username,
+.u-email {
   color: $grey-color;
-  -webkit-transition: 0.8s !important;
-  transtion: color 0.1s !important;
+  -webkit-transition: 0.8s;
 
   &,
   &:visited {
-    color: $grey-color-dark !important;
+    color: $grey-color-dark;
   }
 
   &:hover {
     // color: $brand-color;
-    color: $grey-color !important;
-    text-decoration: none !important;
+    color: $grey-color;
+    text-decoration: none;
   }
 
   &:active {
-    color: black !important;
+    color: black;
   }
 }
 
@@ -396,13 +395,12 @@ body.dark {
   color: rgb(144, 162, 136);
 
   .soc,
-  .username,
   .u-email,
+  .username,
   .spec,
   .site-title {
     color: rgb(144, 162, 136) !important;
     -webkit-transition: 0.8s;
-    transition: color 0.1s;
 
     &,
     &:visited {
@@ -411,12 +409,17 @@ body.dark {
 
     &:hover {
       color: $grey-color !important;
-      text-decoration: none;
+      text-decoration: none !important;
+
     }
 
     &:active {
       color: rgb(64, 72, 68) !important;
     }
+  }
+
+  .svg-icon {
+    fill: rgb(144, 162, 136) !important;
   }
 
   .container p span.cursor {
