@@ -486,8 +486,8 @@ body.dark {
   justify-content: space-between;
   padding: 5px;
   position: relative;
-  height: 26px;
-  width: 50px;
+  height: 20px;
+  width: 36px;
   transform: scale(1.5);
 }
 
@@ -495,16 +495,16 @@ body.dark {
   background-color: #fff;
   border-radius: 50%;
   position: absolute;
-  top: 2px;
-  left: 2px;
-  height: 22px;
-  width: 22px;
+  top: 3px;
+  left: 3px;
+  height: 14px;
+  width: 14px;
   transform: translateX(0px);
   transition: transform 0.2s linear;
 }
 
 .checkbox:checked+.label .ball {
-  transform: translateX(24px);
+  transform: translateX(16px);
 }
 
 
