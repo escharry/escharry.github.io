@@ -10,11 +10,13 @@ permalink: /projects/
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('#note, #proj1, #proj2, #proj3, #proj4').each(function (hidden) {
+            $('#note, #proj1, #proj2, #proj3, #proj4, .hidden').each(function (hidden) {
                 $(this).delay(hidden * 200).fadeIn(200);
             });
         });
     </script>
+    <script src="https://kit.fontawesome.com/f3a2794e84.js" crossorigin="anonymous"></script>
+</head>
 
 <body class="other">
     <div class="hidden" id="note" style="display: none;">
@@ -35,7 +37,9 @@ permalink: /projects/
                 writing of files, viewing their histories, branching to enable separate workflows, and merging of these
                 branches back into main, all through the serializing and deserializing of objects.
                 <br>
-                <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj2/proj2">Spec›</a>
+                <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj2/proj2">
+                    Spec <span class="arrow">&rsaquo;</span>
+                </a>
             </figcaption>
         </figure>
         <img vspace="10">
@@ -54,7 +58,9 @@ permalink: /projects/
                 handling of a variety of possible key-presses input by the player and their effects on aspects of the
                 game including score, board layout and tile values.
                 <br>
-                <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj0/proj0">Spec›</a>
+                <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj0/proj0">
+                    Spec <span class="arrow">&rsaquo;</span>
+                </a>
             </figcaption>
         </figure>
     </div>
@@ -73,7 +79,9 @@ permalink: /projects/
                 interact with objects. Worlds are generated using randomly situated rooms and connections via A* and
                 Manhattan distance as a metric.
                 <br>
-                <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj3/proj3">Spec›</a>
+                <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj3/proj3">
+                    Spec <span class="arrow">&rsaquo;</span>
+                </a>
             </figcaption>
         </figure>
     </div>
@@ -90,22 +98,42 @@ permalink: /projects/
                 Car that recognizes voice commands and responds accordingly. Uses a Texas Instruments microcontroller
                 and microphone to record sample voice commands, filter noise and erroneous input, and implements a
                 classifier based on singular value decomposition and principal component analysis to identify which
-                command was said. This was a project
+                command was issued. This was a project
                 for EECS 16B at UC Berkeley.
             </figcaption>
         </figure>
     </div>
+    <div class="hidden" style="display: none;">
+        <div style="display: flex;
+        justify-content: center; padding-top: 150px;">
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk" style="box-sizing: border-box;">
+                <i class="fas fa-moon" style="font-size:10px"></i>
+                <i class="fas fa-sun" style="font-size:10px"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+    </div>
     <script>
-        if (sessionStorage.getItem('darkMode') == 'enabled') {
-            document.body.classList.toggle('dark');
-            chk.checked = true;
-        } else {
+        const chk = document.getElementById('chk');
+    
+        chk.addEventListener('change', () => {
+          if (document.body.classList.contains('dark')) { //when the body has the class 'dark' currently
+            sessionStorage.setItem('darkMode', 'disabled'); //store this data if dark mode is on
             document.body.classList.remove('dark');
-            chk.checked = false;
+          } else {
+            sessionStorage.setItem('darkMode', 'enabled'); //store this data if dark mode is off
+            document.body.classList.add('dark');
+          }
+        });
+        if (sessionStorage.getItem('darkMode') == 'enabled') {
+          document.body.classList.add('dark');
+          chk.checked = true;
+        } else {
+          document.body.classList.remove('dark');
+          chk.checked = false;
         }
-    </script>
+      </script>
 </body>
-
-</head>
 
 </html>

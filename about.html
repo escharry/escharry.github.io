@@ -13,6 +13,7 @@ permalink: /about/
             $('div.calendar').fadeIn(500).removeClass('hidden');
         });
     </script>
+    <script src="https://kit.fontawesome.com/f3a2794e84.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="other">
@@ -27,11 +28,18 @@ permalink: /about/
         classes at UC Berkeley, where I'm studying to obtain my degree in a related field. -->
         <br>
         Welcome to my software development portfolio! <br><br>
-            
 
-        I'm a data science student with a passion for creating innovative and efficient software solutions. I have a strong background in computer science, having taken a variety of courses providing me with a solid foundation in computer science concepts as well as practical skills in programming, algorithm design, and data structures.
+
+        I'm a data science student with a passion for creating innovative and efficient software solutions. I have a
+        strong background in computer science, having taken a variety of courses providing me with a solid foundation in
+        computer science concepts as well as practical skills in <span class="gradient-text">programming, algorithm
+            design, and data structures</span>.
         <br><br>
-        I'm particularly interested in the design and analysis of algorithms as well as their applications leveraging data. My experience in software development has been greatly enhanced by my education and I am always looking for new ways to apply my skills to different problems. I'm excited to bring my skills and knowledge to a new settings and if you have any questions or would like to discuss potential opportunities, please don't hesitate to reach out to me.
+        I'm particularly interested in the design and analysis of algorithms as well as their applications leveraging
+        data. My experience in software development has been greatly enhanced by my education and I am always looking
+        for new ways to apply my skills to different problems. I'm excited to bring my skills and knowledge to a new
+        settings and if you have any questions or would like to discuss potential opportunities, please don't hesitate
+        to reach out to me.
         <br><br>
         Some relevant courses I've taken at UC Berkeley include:
         <ul>
@@ -67,6 +75,37 @@ permalink: /about/
             chk.checked = false;
         }
     </script>
+    <div class="hidden" style="display: none;">
+        <div style="display: flex;
+        justify-content: center; padding-top: 150px;">
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk" style="box-sizing: border-box;">
+                <i class="fas fa-moon" style="font-size:10px"></i>
+                <i class="fas fa-sun" style="font-size:10px"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+    </div>
+    <script>
+        const chk = document.getElementById('chk');
+    
+        chk.addEventListener('change', () => {
+          if (document.body.classList.contains('dark')) { //when the body has the class 'dark' currently
+            sessionStorage.setItem('darkMode', 'disabled'); //store this data if dark mode is on
+            document.body.classList.remove('dark');
+          } else {
+            sessionStorage.setItem('darkMode', 'enabled'); //store this data if dark mode is off
+            document.body.classList.add('dark');
+          }
+        });
+        if (sessionStorage.getItem('darkMode') == 'enabled') {
+          document.body.classList.add('dark');
+          chk.checked = true;
+        } else {
+          document.body.classList.remove('dark');
+          chk.checked = false;
+        }
+      </script>
 </body>
 
 </html>

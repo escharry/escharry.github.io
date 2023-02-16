@@ -308,6 +308,8 @@
   -webkit-transition: 0.8s;
   transtion: color 0.1s;
   font-weight: 600;
+  display: inline-block;
+  position: relative;
 
   &,
   &:visited {
@@ -323,6 +325,17 @@
   &:active {
     color: black;
   }
+}
+
+.arrow {
+  position: absolute;
+  left: 100%;
+  transition: all 0.3s ease;
+}
+
+.spec:hover .arrow {
+  left: 110%;
+  /* Change this value to adjust the amount the arrow moves */
 }
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
@@ -382,18 +395,14 @@
   }
 }
 
-body {
-  transition: background 0.2s linear;
-}
-
+body,
 body.other {
-  transition: none;
+  transition: background 0.2s linear;
 }
 
 body.dark {
   background: rgb(14, 16, 23);
   color: rgb(144, 162, 136);
-
   .soc,
   .u-email,
   .username,

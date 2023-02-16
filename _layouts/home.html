@@ -15,8 +15,14 @@ layout: default
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
+    // $(document).ready(function () {
+    //   $('div.hidden').fadeIn(500).removeClass('hidden');
+    //   $('div.hiddenyo').fadeIn(500).removeClass('hidden');
+    // });
     $(document).ready(function () {
-      $('div.hidden').fadeIn(500).removeClass('hidden');
+      $('div.hidden').each(function (hidden) {
+        $(this).delay(hidden).fadeIn(200);
+      });
     });
   </script>
   <script src="https://kit.fontawesome.com/f3a2794e84.js" crossorigin="anonymous"></script>
@@ -29,15 +35,20 @@ layout: default
     </div>
   </div>
   <script src="type.js"></script>
-  <div style="display: flex;
-  justify-content: center; padding-top: 150px;">
-    <input type="checkbox" class="checkbox" id="chk" />
-    <label class="label" for="chk" style="box-sizing: border-box;">
-      <i class="fas fa-moon" style="font-size:10px"></i>
-      <i class="fas fa-sun" style="font-size:10px"></i>
-      <div class="ball"></div>
-    </label>
+  <div class="hidden" style="display: none;">
+    <div style="display: flex;
+    justify-content: center; padding-top: 150px;">
+      <input type="checkbox" class="checkbox" id="chk" />
+      <label class="label" for="chk" style="box-sizing: border-box;">
+        <i class="fas fa-moon" style="font-size:10px"></i>
+        <i class="fas fa-sun" style="font-size:10px"></i>
+        <div class="ball"></div>
+      </label>
+    </div>
   </div>
+  <style>
+
+  </style>
   <script>
     const chk = document.getElementById('chk');
 
