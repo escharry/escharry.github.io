@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <body>
+<body>
 
-    {%- include header.html -%}
+  {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="hidden" style="display: none;">
+        <div style="display: flex;
+          justify-content: right; padding-top: 0px;">
+          <input type="checkbox" class="checkbox" id="chk" />
+          <label class="label" for="chk" style="box-sizing: border-box;">
+            <i class="fas fa-moon" style="font-size:10px"></i>
+            <i class="fas fa-sun" style="font-size:10px"></i>
+            <div class="ball"></div>
+          </label>
+        </div>
       </div>
-    </main>
+      {{ content }}
+    </div>
+  </main>
 
-    {%- include footer.html -%}
+  {%- include footer.html -%}
 
-  </body>
+</body>
 
 </html>
