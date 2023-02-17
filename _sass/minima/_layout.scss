@@ -370,6 +370,12 @@
   animation: blink 1s infinite;
 }
 
+hr {
+  background-color: $grey-color-dark;
+  height: 1px;
+  border: 0;
+}
+
 .container p span.cursor.typing {
   animation: none;
 }
@@ -404,6 +410,10 @@ body.other {
 body.dark {
   background: rgb(14, 16, 23);
   color: rgb(144, 162, 136);
+
+  hr {
+    border-color: rgb(144, 162, 136);
+  }
 
   @media screen and (max-width: 600px) {
     .site-nav {

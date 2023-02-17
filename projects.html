@@ -22,7 +22,7 @@ permalink: /projects/
     <div class="hidden" id="note" style="display: none;">
         <b>Note</b>: School projects will not have code publicly available.
     </div>
-    <img vspace="10">
+    <img vspace="20">
     <div class="hidden" id="proj1" style="display: none;">
         <h1>Gitlet</h1>
         <figure>
@@ -42,6 +42,7 @@ permalink: /projects/
                 </a>
             </figcaption>
         </figure>
+        <hr>
         <img vspace="10">
     </div>
     <div class="hidden" id="proj2" style="display: none;">
@@ -63,8 +64,9 @@ permalink: /projects/
                 </a>
             </figcaption>
         </figure>
+        <hr>
+        <img vspace="10">
     </div>
-    <img vspace="10">
     <div class="hidden" id="proj3" style="display: none;">
         <h1>2D Tile World Generator</h1>
         <figure>
@@ -84,6 +86,8 @@ permalink: /projects/
                 </a>
             </figcaption>
         </figure>
+        <hr>
+        <img vspace="10">
     </div>
     <div class="hidden" id="proj4" style="display: none;">
         <h1>SIXT33N: Voice Controlled Car</h1>
@@ -105,24 +109,24 @@ permalink: /projects/
     </div>
     <script>
         const chk = document.getElementById('chk');
-    
+
         chk.addEventListener('change', () => {
-          if (document.body.classList.contains('dark')) { //when the body has the class 'dark' currently
-            sessionStorage.setItem('darkMode', 'disabled'); //store this data if dark mode is on
-            document.body.classList.remove('dark');
-          } else {
-            sessionStorage.setItem('darkMode', 'enabled'); //store this data if dark mode is off
-            document.body.classList.add('dark');
-          }
+            if (document.body.classList.contains('dark')) { //when the body has the class 'dark' currently
+                sessionStorage.setItem('darkMode', 'disabled'); //store this data if dark mode is on
+                document.body.classList.remove('dark');
+            } else {
+                sessionStorage.setItem('darkMode', 'enabled'); //store this data if dark mode is off
+                document.body.classList.add('dark');
+            }
         });
         if (sessionStorage.getItem('darkMode') == 'enabled') {
-          document.body.classList.add('dark');
-          chk.checked = true;
+            document.body.classList.add('dark');
+            chk.checked = true;
         } else {
-          document.body.classList.remove('dark');
-          chk.checked = false;
+            document.body.classList.remove('dark');
+            chk.checked = false;
         }
-      </script>
+    </script>
 </body>
 
 </html>
