@@ -404,6 +404,24 @@ body.other {
 body.dark {
   background: rgb(14, 16, 23);
   color: rgb(144, 162, 136);
+
+  @media screen and (max-width: 600px) {
+    .site-nav {
+      position: absolute;
+      top: 9px;
+      right: 15px;
+      background-color: rgb(14, 16, 23);
+      border: 1px solid rgb(144, 162, 136);
+      border-radius: 5px;
+      text-align: right;
+      transition: background 0.2s linear;
+    }
+
+    .site-nav .menu-icon>svg {
+      fill: rgb(144, 162, 136);
+    }
+  }
+
   .soc,
   .u-email,
   .username,
