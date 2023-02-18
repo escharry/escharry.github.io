@@ -18,8 +18,7 @@ permalink: /about/
 
 <body class="other">
     <div class="hidden" style="display: none;">
-        <img id="me" alt="me" src='/assets/me.jpg' onmouseover="this.src='/assets/cat.jpg';"
-            onmouseout="this.src='/assets/me.jpg';" />
+        <img id="me" alt="me" src='/assets/me.jpg' onclick="changeImage()">
     </div>
     <br>
     <div class="hidden" style="display: none;">
@@ -77,24 +76,45 @@ permalink: /about/
     </script>
     <script>
         const chk = document.getElementById('chk');
-    
+
         chk.addEventListener('change', () => {
-          if (document.body.classList.contains('dark')) { //when the body has the class 'dark' currently
-            sessionStorage.setItem('darkMode', 'disabled'); //store this data if dark mode is on
-            document.body.classList.remove('dark');
-          } else {
-            sessionStorage.setItem('darkMode', 'enabled'); //store this data if dark mode is off
-            document.body.classList.add('dark');
-          }
+            if (document.body.classList.contains('dark')) { //when the body has the class 'dark' currently
+                sessionStorage.setItem('darkMode', 'disabled'); //store this data if dark mode is on
+                document.body.classList.remove('dark');
+            } else {
+                sessionStorage.setItem('darkMode', 'enabled'); //store this data if dark mode is off
+                document.body.classList.add('dark');
+            }
         });
         if (sessionStorage.getItem('darkMode') == 'enabled') {
-          document.body.classList.add('dark');
-          chk.checked = true;
+            document.body.classList.add('dark');
+            chk.checked = true;
         } else {
-          document.body.classList.remove('dark');
-          chk.checked = false;
+            document.body.classList.remove('dark');
+            chk.checked = false;
         }
-      </script>
+    </script>
+    <script>
+        var counter = 0;
+        $('#me').on({
+            'click': function () {
+                if (counter == 0) {
+                    $("#me").fadeOut("fast", function () {
+                        $('#me').attr('src', '/assets/cat.jpg');
+                        $("#me").fadeIn("fast");
+                    });
+                    counter++;
+                }
+                else if (counter == 1) {
+                    $("#me").fadeOut("fast", function () {
+                        $('#me').attr('src', '/assets/me.jpg');
+                        $("#me").fadeIn("fast");
+                    });
+                    counter = 0;
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
