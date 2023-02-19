@@ -423,24 +423,30 @@ body.other {
 
 body.dark {
   background: rgb(14, 16, 23);
-  color: rgb(144, 162, 136);
+  // color: rgb(144, 162, 136);
+  color: #CAD1D8;
 
-#me {
-  backdrop-filter: blur(5.5px);
-  -webkit-backdrop-filter: blur(5.5px);
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.01);
-  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-  color: #232323;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(0, 0, 0, 0.34);
-}
+  #me {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.34);
+  }
 
+  .email-link, .linkedin-link {
+    &:hover {
+      color: #2c4660 !important; 
+    }
+  }
 
   hr {
-    background-color: rgb(144, 162, 136);
+    background-color: #CAD1D8;
   }
 
   @media screen and (max-width: 600px) {
@@ -449,14 +455,14 @@ body.dark {
       top: 9px;
       right: 15px;
       background-color: rgb(14, 16, 23);
-      border: 1px solid rgb(144, 162, 136);
+      border: 1px solid #CAD1D8;
       border-radius: 5px;
       text-align: right;
       transition: background 0.2s linear;
     }
 
     .site-nav .menu-icon>svg {
-      fill: rgb(144, 162, 136);
+      fill: #CAD1D8;
     }
   }
 
@@ -465,40 +471,38 @@ body.dark {
   .username,
   .spec,
   .site-title {
-    color: rgb(144, 162, 136) !important;
+    color: #CAD1D8 !important;
     -webkit-transition: 0.8s;
 
     &,
     &:visited {
-      color: rgb(144, 162, 136) !important;
+      color: #CAD1D8 !important;
     }
 
     &:hover {
-      color: $grey-color !important;
-      text-decoration: none !important;
-
+      color: #939da9 !important;
     }
 
     &:active {
-      color: rgb(64, 72, 68) !important;
+      color: #4f545d !important;
     }
   }
 
   .svg-icon {
-    fill: rgb(144, 162, 136) !important;
+    fill: #CAD1D8 !important;
   }
 
   .container p span.cursor {
-    background-color: rgb(144, 162, 136);
+    background-color: #CAD1D8;
   }
 
   @keyframes blink {
     0% {
-      background-color: rgb(144, 162, 136) !important;
+      background-color: #CAD1D8 !important;
     }
 
     49% {
-      background-color: rgb(144, 162, 136) !important;
+      background-color: #CAD1D8 !important;
     }
 
     50% {
@@ -510,31 +514,39 @@ body.dark {
     }
 
     100% {
-      background-color: rgb(144, 162, 136) !important;
+      background-color: #CAD1D8 !important;
     }
   }
 
+  .footer-col.footer-col-3 {
+    color: #CAD1D8;
+  }
+
   .page-link {
-    color: rgb(144, 162, 136);
+    color: #CAD1D8;
 
     &:active {
-      color: rgb(64, 72, 68) !important;
+      color: #4f545d !important;
+    }
+
+    &:hover {
+      color: #939da9;
     }
   }
 
   .container p span.typed-text {
     font-weight: normal;
-    color: rgb(144, 162, 136);
+    color: #CAD1D8;
 
   }
 
   .site-header {
-    border-top: 5px solid rgb(144, 162, 136);
-    border-bottom: 1px solid rgb(144, 162, 136);
+    border-top: 5px solid #CAD1D8;
+    border-bottom: 1px solid #CAD1D8;
   }
 
   .site-footer {
-    border-top: 1px solid rgb(144, 162, 136);
+    border-top: 1px solid #CAD1D8;
   }
 }
 
@@ -575,7 +587,7 @@ body.dark {
 
 
 .fa-moon {
-  color: rgb(144, 162, 136);
+  color: #CAD1D8;
 }
 
 .fa-sun {
