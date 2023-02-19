@@ -20,13 +20,13 @@ permalink: /projects/
 
 <body class="other">
     <div class="hidden" id="note" style="display: none;">
-        <b>Note</b>: School projects will not have code publicly available.
+        <b>Note</b>: School projects will not have code publicly available. Click images to see more.
     </div>
     <img vspace="20">
     <div class="hidden" id="proj1" style="display: none;">
         <h1>Gitlet</h1>
         <figure>
-            <img id="project-image" src='/assets/gitlet.gif' alt='gitlet' vspace="20" style="border-radius: 7px; 
+            <img id="project-image1" src='/assets/gitlet.gif' alt='gitlet' vspace="20" style="border-radius: 7px; 
                        display: block;
                        margin-left: auto;
                        margin-right: auto;
@@ -46,7 +46,7 @@ permalink: /projects/
     <div class="hidden" id="proj2" style="display: none;">
         <h1>2048</h1>
         <figure>
-            <img id="project-image" src='/assets/2048.gif' alt='2048' vspace="20" style="display: block;
+            <img id="project-image2" src='/assets/2048.gif' alt='2048' vspace="20" style="display: block;
                                 margin-left: auto;
                                 margin-right: auto;
                                 width: 50%;
@@ -68,7 +68,7 @@ permalink: /projects/
     <div class="hidden" id="proj3" style="display: none;">
         <h1>2D Tile World Generator</h1>
         <figure>
-            <img id="project-image" src='/assets/2dtile.gif' alt='2dtile' class="fadein" vspace="20" style="border-radius: 10px;
+            <img id="project-image3" src='/assets/2dtile.gif' alt='2dtile' class="fadein" vspace="20" style="border-radius: 10px;
                            display: block;
                            margin-left: auto;
                            margin-right: auto;
@@ -120,6 +120,55 @@ permalink: /projects/
             document.body.classList.remove('dark');
             chk.checked = false;
         }
+    </script>
+    <script>
+        var counter = 0;
+        $('#project-image1').on({
+            'click': function () {
+                if (counter == 0) {
+                    $("#project-image1").fadeOut("fast", function () {
+                        $('#project-image1').attr('src', '/assets/commits-and-blobs.png');
+                        $("#project-image1").fadeIn("fast");
+                    });
+                    counter++;
+                }
+                else if (counter == 1) {
+                    $("#project-image1").fadeOut("fast", function () {
+                        $('#project-image1').attr('src', '/assets/two_developed_versions.png');
+                        $("#project-image1").fadeIn("fast");
+                    });
+                    counter++;
+                }
+                else if (counter ==2) {
+                    $("#project-image1").fadeOut("fast", function () {
+                        $('#project-image1').attr('src', '/assets/gitlet.gif');
+                        $("#project-image1").fadeIn("fast");
+                    });
+                    counter = 0;
+                }
+            }
+        });
+    </script>
+    <script>
+        var counter = 0;
+        $('#project-image3').on({
+            'click': function () {
+                if (counter == 0) {
+                    $("#project-image3").fadeOut("fast", function () {
+                        $('#project-image3').attr('src', '/assets/mainmenu_example.png');
+                        $("#project-image3").fadeIn("fast");
+                    });
+                    counter++;
+                }
+                else if (counter == 1) {
+                    $("#project-image3").fadeOut("fast", function () {
+                        $('#project-image3').attr('src', '/assets/2dtile.gif');
+                        $("#project-image3").fadeIn("fast");
+                    });
+                    counter = 0;
+                }
+            }
+        });
     </script>
 </body>
 
