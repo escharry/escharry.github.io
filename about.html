@@ -106,6 +106,13 @@ permalink: /about/
                 }
                 else if (counter == 1) {
                     $("#me").fadeOut("fast", function () {
+                        $('#me').attr('src', '/assets/cat2.png');
+                        $("#me").fadeIn("fast");
+                    });
+                    counter++;
+                }
+                else if (counter == 2) {
+                    $("#me").fadeOut("fast", function () {
                         $('#me').attr('src', '/assets/me.jpg');
                         $("#me").fadeIn("fast");
                     });
