@@ -33,7 +33,10 @@ permalink: /projects/
                        width: 90%;
                        border-radius: 10px;" />
             <figcaption>
-                Command line version control system implementing essential features of Git. Handles the reading and writing of files, viewing their respective histories, branching for separate workflows, and merging of these branches back into main, all through the serialization of data structures representing these files.
+                Command line version control system implementing essential features of Git. Handles the reading and
+                writing of files, viewing their respective histories, branching for separate workflows, and merging of
+                these branches back into main, all through the serialization of data structures representing these
+                files.
                 <br>
                 <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj2/proj2">
                     Spec &nbsp;<span class="arrow">&rsaquo;</span>
@@ -75,7 +78,9 @@ permalink: /projects/
                            width: 90%;
                            border-radius: 10px;" />
             <figcaption>
-                Engine for generating random, expansive worlds in which the user is able to explore and interact with the environment. Worlds are generated using randomly positioned rooms and connections are made between them via A* search using
+                Engine for generating random, expansive worlds in which the user is able to explore and interact with
+                the environment. Worlds are generated using randomly positioned rooms and connections are made between
+                them via A* search using
                 Manhattan distance as a heuristic.
                 <br>
                 <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj3/proj3">
@@ -96,7 +101,9 @@ permalink: /projects/
                            width: 90%;
                            border-radius: 10px;" />
             <figcaption>
-                Car that recognizes voice commands and reacts accordingly. Uses a Texas Instruments microcontroller and microphone to record voice commands, filter noisy, erroneous input, and implements a classifier based on singular value decomposition and principal component analysis to identify the
+                Car that recognizes voice commands and reacts accordingly. Uses a Texas Instruments microcontroller and
+                microphone to record voice commands, filter noisy, erroneous input, and implements a classifier based on
+                singular value decomposition and principal component analysis to identify the
                 command issued. This was a project for EECS 16B at UC Berkeley.
             </figcaption>
         </figure>
@@ -121,53 +128,36 @@ permalink: /projects/
             chk.checked = false;
         }
     </script>
+    <style>
+        #project-image1,
+        #project-image3 {
+            transition: opacity 0.25s ease-in-out;
+        }
+    </style>
     <script>
-        var counter = 0;
-        $('#project-image1').on({
-            'click': function () {
-                if (counter == 0) {
-                    $("#project-image1").fadeOut("fast", function () {
-                        $('#project-image1').attr('src', '/assets/commits-and-blobs.png');
-                        $("#project-image1").fadeIn("fast");
-                    });
-                    counter++;
-                }
-                else if (counter == 1) {
-                    $("#project-image1").fadeOut("fast", function () {
-                        $('#project-image1').attr('src', '/assets/two_developed_versions.png');
-                        $("#project-image1").fadeIn("fast");
-                    });
-                    counter++;
-                }
-                else if (counter ==2) {
-                    $("#project-image1").fadeOut("fast", function () {
-                        $('#project-image1').attr('src', '/assets/gitlet.gif');
-                        $("#project-image1").fadeIn("fast");
-                    });
-                    counter = 0;
-                }
-            }
+        var counter1 = 0;
+        var picture1 = document.getElementById('project-image1');
+        var images1 = ["/assets/gitlet.gif", "/assets/commits-and-blobs.png", "/assets/two_developed_versions.png"];
+        picture1.addEventListener('click', () => {
+            counter1 = (counter1 + 1) % images1.length;
+            picture1.style.opacity = 0;
+            setTimeout(() => {
+                picture1.src = images1[counter1];
+                picture1.style.opacity = 1;
+            }, 250);
         });
     </script>
     <script>
-        var counter = 0;
-        $('#project-image3').on({
-            'click': function () {
-                if (counter == 0) {
-                    $("#project-image3").fadeOut("fast", function () {
-                        $('#project-image3').attr('src', '/assets/mainmenu_example.png');
-                        $("#project-image3").fadeIn("fast");
-                    });
-                    counter++;
-                }
-                else if (counter == 1) {
-                    $("#project-image3").fadeOut("fast", function () {
-                        $('#project-image3').attr('src', '/assets/2dtile.gif');
-                        $("#project-image3").fadeIn("fast");
-                    });
-                    counter = 0;
-                }
-            }
+        var counter3 = 0;
+        var picture3 = document.getElementById('project-image3');
+        var images3 = ["/assets/2dtile.gif", "/assets/mainmenu_example.png"];
+        picture3.addEventListener('click', () => {
+            counter3 = (counter3 + 1) % images3.length;
+            picture3.style.opacity = 0;
+            setTimeout(() => {
+                picture3.src = images3[counter3];
+                picture3.style.opacity = 1;
+            }, 250);
         });
     </script>
 </body>

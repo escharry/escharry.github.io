@@ -18,7 +18,7 @@ permalink: /about/
 
 <body class="other">
     <div class="hidden" style="display: none;">
-        <img id="me" alt="me" src='/assets/me.jpg' onclick="changeImage()">
+        <img id="me" alt="me" src='/assets/me.jpg'>
     </div>
     <br>
     <div class="hidden" style="display: none;">
@@ -29,7 +29,8 @@ permalink: /about/
         Welcome to my software development portfolio! <br><br>
 
 
-        I'm Esteban Charry (he/him/his), a data science student with a passion for creating innovative and efficient software solutions. I have a
+        I'm Esteban Charry (he/him/his), a data science student with a passion for creating innovative and efficient
+        software solutions. I have a
         strong background in computer science, having taken a variety of courses providing me with a solid foundation in
         computer science concepts as well as practical skills in programming, design of algorithms, and data structures.
         <br><br>
@@ -37,7 +38,9 @@ permalink: /about/
         data. My experience in software development has been greatly enhanced by my education and I am always looking
         for new ways to apply my skills to different problems. I'm excited to bring my skills and knowledge to a new
         settings and if you have any questions or would like to discuss potential opportunities, please don't hesitate
-        to reach out to me! The best ways to do so being <a class="email-link" href="mailto:echarry@berkeley.edu">email</a> and <a class="linkedin-link" href="https://www.linkedin.com/in/estebancharry/">LinkedIn</a>.
+        to reach out to me! The best ways to do so being <a class="email-link"
+            href="mailto:echarry@berkeley.edu">email</a> and <a class="linkedin-link"
+            href="https://www.linkedin.com/in/estebancharry/">LinkedIn</a>.
         <br><br>
         Some relevant courses I've taken at UC Berkeley include:
         <ul>
@@ -93,32 +96,22 @@ permalink: /about/
             chk.checked = false;
         }
     </script>
+    <style>
+        #me {
+            transition: opacity 0.25s ease-in-out;
+        }
+    </style>
     <script>
         var counter = 0;
-        $('#me').on({
-            'click': function () {
-                if (counter == 0) {
-                    $("#me").fadeOut("fast", function () {
-                        $('#me').attr('src', '/assets/cat.jpg');
-                        $("#me").fadeIn("fast");
-                    });
-                    counter++;
-                }
-                else if (counter == 1) {
-                    $("#me").fadeOut("fast", function () {
-                        $('#me').attr('src', '/assets/cat2.png');
-                        $("#me").fadeIn("fast");
-                    });
-                    counter++;
-                }
-                else if (counter == 2) {
-                    $("#me").fadeOut("fast", function () {
-                        $('#me').attr('src', '/assets/me.jpg');
-                        $("#me").fadeIn("fast");
-                    });
-                    counter = 0;
-                }
-            }
+        const picture = document.getElementById('me');
+        var images = ["/assets/me.jpg", "/assets/cat.jpg", "/assets/cat2.jpg"];
+        picture.addEventListener('click', () => {
+            counter = (counter + 1) % images.length;
+            picture.style.opacity = 0;
+            setTimeout(() => {
+                picture.src = images[counter];
+                picture.style.opacity = 1;
+            }, 250);
         });
     </script>
 </body>
