@@ -96,22 +96,29 @@ permalink: /about/
             chk.checked = false;
         }
     </script>
-    <style>
-        #me {
-            transition: opacity 0.25s ease-in-out;
-        }
-    </style>
     <script>
-        var counter = 0;
-        const picture = document.getElementById('me');
-        var images = ["/assets/me.jpg", "/assets/cat.jpg", "/assets/cat2.jpg"];
-        picture.addEventListener('click', () => {
-            counter = (counter + 1) % images.length;
-            picture.style.opacity = 0;
-            setTimeout(() => {
-                picture.src = images[counter];
-                picture.style.opacity = 1;
-            }, 250);
+        var images = ['/assets/me.jpg', '/assets/cat.jpg', '/assets/cat2.jpg'];
+        var loadedImages = [];
+        var numImages = images.length;
+        var counter = 1;
+
+        function preload() {
+            for (var i = 0; i < numImages; i++) {
+                loadedImages[i] = new Image();
+                loadedImages[i].src = images[i];
+            }
+        }
+
+        $(document).ready(function () {
+            preload();
+
+            $('#me').click(function () {
+                $('#me').fadeOut(400, function () {
+                    $(this).attr('src', loadedImages[counter].src);
+                    $(this).fadeIn(400);
+                    counter = (counter + 1) % numImages;
+                });
+            });
         });
     </script>
 </body>

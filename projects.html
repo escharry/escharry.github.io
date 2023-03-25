@@ -128,36 +128,54 @@ permalink: /projects/
             chk.checked = false;
         }
     </script>
-    <style>
-        #project-image1,
-        #project-image3 {
-            transition: opacity 0.25s ease-in-out;
-        }
-    </style>
     <script>
-        var counter1 = 0;
-        var picture1 = document.getElementById('project-image1');
-        var images1 = ["/assets/gitlet.gif", "/assets/commits-and-blobs.png", "/assets/two_developed_versions.png"];
-        picture1.addEventListener('click', () => {
-            counter1 = (counter1 + 1) % images1.length;
-            picture1.style.opacity = 0;
-            setTimeout(() => {
-                picture1.src = images1[counter1];
-                picture1.style.opacity = 1;
-            }, 250);
+        var images1 = ['/assets/gitlet.gif', '/assets/commits-and-blobs.png', '/assets/two_developed_versions.png'];
+        var loadedImages1 = [];
+        var numImages1 = images1.length;
+        var counter1 = 1;
+
+        function preload1() {
+            for (var i = 0; i < numImages1; i++) {
+                loadedImages1[i] = new Image();
+                loadedImages1[i].src = images1[i];
+            }
+        }
+
+        $(document).ready(function () {
+            preload1();
+
+            $('#project-image1').click(function () {
+                $('#project-image1').fadeOut(400, function () {
+                    $(this).attr('src', loadedImages1[counter1].src);
+                    $(this).fadeIn(400);
+                    counter1 = (counter1 + 1) % numImages1;
+                });
+            });
         });
     </script>
     <script>
-        var counter3 = 0;
-        var picture3 = document.getElementById('project-image3');
-        var images3 = ["/assets/2dtile.gif", "/assets/mainmenu_example.png"];
-        picture3.addEventListener('click', () => {
-            counter3 = (counter3 + 1) % images3.length;
-            picture3.style.opacity = 0;
-            setTimeout(() => {
-                picture3.src = images3[counter3];
-                picture3.style.opacity = 1;
-            }, 250);
+        var images3 = ['/assets/2dtile.gif', '/assets/mainmenu_example.png'];
+        var loadedImages3 = [];
+        var numImages3 = images3.length;
+        var counter3 = 1;
+
+        function preload3() {
+            for (var i = 0; i < numImages3; i++) {
+                loadedImages3[i] = new Image();
+                loadedImages3[i].src = images3[i];
+            }
+        }
+
+        $(document).ready(function () {
+            preload3();
+
+            $('#project-image3').click(function () {
+                $('#project-image3').fadeOut(400, function () {
+                    $(this).attr('src', loadedImages3[counter3].src);
+                    $(this).fadeIn(400);
+                    counter3 = (counter3 + 1) % numImages3;
+                });
+            });
         });
     </script>
 </body>
