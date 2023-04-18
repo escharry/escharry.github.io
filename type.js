@@ -2,9 +2,9 @@ const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
 
-const textArray = ["a student", "a developer", "Python lover", "Java lover", "inquirer", "data wrangler", "UNIX enjoyer", "zsh customizer", "Θ(n¹·⁵⁸⁵)", "C++ liker", "chess enjoyer", "burrito lover", "cat lover", "T(n) = aT(n/b) + f(n)", "O(n²·³⁷¹⁸⁸)"];
-const typingDelay = 100;
-const erasingDelay = 100;
+const textArray = ["a student", "a developer", "a Python lover", "a Java lover", "an inquirer", "a data wrangler", "a UNIX enjoyer", "a zsh customizer", "Θ(n¹·⁵⁸⁵)", "a C++ liker", "a chess enjoyer", "NP-complete", "a burrito lover", "a dynamic programmer", "a cat lover", "T(n) = aT(n/b) + f(n)", "O(n²·³⁷¹⁸⁸)", "a reducer in polynomial time!"];
+const typingDelay = 74;
+const erasingDelay = 74;
 const newTextDelay = 1000; // Delay between current and next text
 let textArrayIndex = 0;
 let charIndex = 0;

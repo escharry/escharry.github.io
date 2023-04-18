@@ -47,9 +47,28 @@ permalink: /projects/
         <img vspace="10">
     </div>
     <div class="hidden" id="proj2" style="display: none;">
+        <h1>AI Pacman</h1>
+        <figure>
+            <img id="project-image2" src='/assets/pacman.gif' alt='pacman' class="fadein" vspace="20" style="border-radius: 10px;
+                           display: block;
+                           margin-left: auto;
+                           margin-right: auto;
+                           width: 90%;
+                           border-radius: 10px;" />
+            <figcaption>
+                Pac-Man projects which involve utilizing various AI methods to play Pac-Man. However, the main goal of these projects is not to create AI specifically for video games but to impart essential AI principles like informed state-space search, probabilistic inference, and reinforcement learning. Topics covered in these include search, logic, multiagent search, reinforcement learning, Bayesian networks, and machine learning.
+                <br>
+                <a class="spec" href="https://inst.eecs.berkeley.edu/~cs188/sp23/projects/">
+                    Spec &nbsp;<span class="arrow">&rsaquo;</span>
+                </a>
+            </figcaption>
+        </figure>
+    </div>
+    <hr>
+    <div class="hidden" id="proj3" style="display: none;">
         <h1>2048</h1>
         <figure>
-            <img id="project-image2" src='/assets/2048.gif' alt='2048' vspace="20" style="display: block;
+            <img id="project-image3" src='/assets/2048.gif' alt='2048' vspace="20" style="display: block;
                                 margin-left: auto;
                                 margin-right: auto;
                                 width: 50%;
@@ -57,8 +76,7 @@ permalink: /projects/
                                 " />
             <figcaption>
                 Core logic of the game 2048, a single-player computer game written by Gabriele Cirulli, including the
-                handling of a variety of possible key-presses by the player and their effects on aspects of the
-                game including score, board layout and tile values.
+                handling of a variety of possible key-presses by the player and their effects on aspects of the game including score, board layout and tile values.
                 <br>
                 <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj0/proj0">
                     Spec &nbsp;<span class="arrow">&rsaquo;</span>
@@ -68,10 +86,10 @@ permalink: /projects/
         <hr>
         <img vspace="10">
     </div>
-    <div class="hidden" id="proj3" style="display: none;">
+    <div class="hidden" id="proj4" style="display: none;">
         <h1>2D Tile World Generator</h1>
         <figure>
-            <img id="project-image3" src='/assets/2dtile.gif' alt='2dtile' class="fadein" vspace="20" style="border-radius: 10px;
+            <img id="project-image4" src='/assets/2dtile.gif' alt='2dtile' class="fadein" vspace="20" style="border-radius: 10px;
                            display: block;
                            margin-left: auto;
                            margin-right: auto;
@@ -80,8 +98,7 @@ permalink: /projects/
             <figcaption>
                 Engine for generating random, expansive worlds in which the user is able to explore and interact with
                 the environment. Worlds are generated using randomly positioned rooms and connections are made between
-                them via A* search using
-                Manhattan distance as a heuristic.
+                them via A* search using Manhattan distance as a heuristic.
                 <br>
                 <a class="spec" href="https://sp21.datastructur.es/materials/proj/proj3/proj3">
                     Spec &nbsp;<span class="arrow">&rsaquo;</span>
@@ -91,7 +108,7 @@ permalink: /projects/
         <hr>
         <img vspace="10">
     </div>
-    <div class="hidden" id="proj4" style="display: none;">
+    <div class="hidden" id="proj5" style="display: none;">
         <h1>SIXT33N: Voice Controlled Car</h1>
         <figure>
             <img id="project-image" src='/assets/car.png' alt='car' class="fadein" vspace="20" style="border-radius: 10px;
@@ -103,8 +120,7 @@ permalink: /projects/
             <figcaption>
                 Car that recognizes voice commands and reacts accordingly. Uses a Texas Instruments microcontroller and
                 microphone to record voice commands, filter noisy, erroneous input, and implements a classifier based on
-                singular value decomposition and principal component analysis to identify the
-                command issued. This was a project for EECS 16B at UC Berkeley.
+                singular value decomposition and principal component analysis to identify the command issued.
             </figcaption>
         </figure>
     </div>
@@ -154,26 +170,51 @@ permalink: /projects/
         });
     </script>
     <script>
-        var images3 = ['/assets/2dtile.gif', '/assets/mainmenu_example.png'];
-        var loadedImages3 = [];
-        var numImages3 = images3.length;
-        var counter3 = 1;
+        var images2 = ['/assets/pacman.gif', '/assets/maze.png', '/assets/minimax_depth.png', '/assets/q_learning.png', '/assets/ml_project_teaser.png'];
+        var loadedImages2 = [];
+        var numImages2 = images2.length;
+        var counter2 = 1;
 
-        function preload3() {
-            for (var i = 0; i < numImages3; i++) {
-                loadedImages3[i] = new Image();
-                loadedImages3[i].src = images3[i];
+        function preload2() {
+            for (var i = 0; i < numImages2; i++) {
+                loadedImages2[i] = new Image();
+                loadedImages2[i].src = images2[i];
             }
         }
 
         $(document).ready(function () {
-            preload3();
+            preload2();
 
-            $('#project-image3').click(function () {
-                $('#project-image3').fadeOut(400, function () {
-                    $(this).attr('src', loadedImages3[counter3].src);
+            $('#project-image2').click(function () {
+                $('#project-image2').fadeOut(400, function () {
+                    $(this).attr('src', loadedImages2[counter2].src);
                     $(this).fadeIn(400);
-                    counter3 = (counter3 + 1) % numImages3;
+                    counter2 = (counter2 + 1) % numImages2;
+                });
+            });
+        });
+    </script>
+    <script>
+        var images4 = ['/assets/2dtile.gif', '/assets/mainmenu_example.png'];
+        var loadedImages4 = [];
+        var numImages4 = images4.length;
+        var counter4 = 1;
+
+        function preload4() {
+            for (var i = 0; i < numImages4; i++) {
+                loadedImages4[i] = new Image();
+                loadedImages4[i].src = images4[i];
+            }
+        }
+
+        $(document).ready(function () {
+            preload4();
+
+            $('#project-image4').click(function () {
+                $('#project-image4').fadeOut(400, function () {
+                    $(this).attr('src', loadedImages4[counter4].src);
+                    $(this).fadeIn(400);
+                    counter4 = (counter4 + 1) % numImages4;
                 });
             });
         });
