@@ -47,7 +47,7 @@ permalink: /projects/
         <img vspace="10">
     </div>
     <div class="hidden" id="proj2" style="display: none;">
-        <h1>AI Pac-Man, Machine Learning Models</h1>
+        <h1>AI Pac-Man</h1>
         <figure>
             <img id="project-image2" src='/assets/pacman.gif' alt='pacman' class="fadein" vspace="20" style="border-radius: 10px;
                            display: block;
@@ -70,12 +70,33 @@ permalink: /projects/
                 </a>
             </figcaption>
         </figure>
+        <hr>
+        <img vspace="10">
     </div>
-    <hr>
     <div class="hidden" id="proj3" style="display: none;">
+        <h1>Machine Learning Models</h1>
+        <figure>
+            <img id="project-image3" src='/assets/digits.gif' alt='ml' vspace="20" style="border-radius: 7px; 
+                       display: block;
+                       margin-left: auto;
+                       margin-right: auto;
+                       width: 90%;
+                       border-radius: 10px;" />
+            <figcaption>
+                This project consisted of implementing the perceptron algorithm, neural network, and recurrent neural network models to approximate sinusoidal functions, recognize handwritten digits, and classify natural languages.
+                <br>
+                <a class="spec" href="https://inst.eecs.berkeley.edu/~cs188/sp23/projects/proj6/">
+                    Spec &nbsp;<span class="arrow">&rsaquo;</span>
+                </a>
+            </figcaption>
+        </figure>
+        <hr>
+        <img vspace="10">
+    </div>
+    <div class="hidden" id="proj5" style="display: none;">
         <h1>2048</h1>
         <figure>
-            <img id="project-image3" src='/assets/2048.gif' alt='2048' vspace="20" style="display: block;
+            <img id="project-image" src='/assets/2048.gif' alt='2048' vspace="20" style="display: block;
                                 margin-left: auto;
                                 margin-right: auto;
                                 width: 50%;
@@ -94,10 +115,10 @@ permalink: /projects/
         <hr>
         <img vspace="10">
     </div>
-    <div class="hidden" id="proj4" style="display: none;">
+    <div class="hidden" id="proj6" style="display: none;">
         <h1>2D Tile World Generator</h1>
         <figure>
-            <img id="project-image4" src='/assets/2dtile.gif' alt='2dtile' class="fadein" vspace="20" style="border-radius: 10px;
+            <img id="project-image" src='/assets/2dtile.gif' alt='2dtile' class="fadein" vspace="20" style="border-radius: 10px;
                            display: block;
                            margin-left: auto;
                            margin-right: auto;
@@ -114,7 +135,7 @@ permalink: /projects/
         <hr>
         <img vspace="10">
     </div>
-    <div class="hidden" id="proj5" style="display: none;">
+    <div class="hidden" id="proj7" style="display: none;">
         <h1>SIXT33N: Voice Controlled Car</h1>
         <figure>
             <img id="project-image" src='/assets/car.png' alt='car' class="fadein" vspace="20" style="border-radius: 10px;
@@ -186,7 +207,7 @@ permalink: /projects/
         });
     </script>
     <script>
-        var images2 = ['/assets/pacman.gif', '/assets/maze.png', '/assets/minimax_depth.png', '/assets/q_learning.png', '/assets/ml_project_teaser.png'];
+        var images2 = ['/assets/pacman.gif', '/assets/maze.png', '/assets/minimax_depth.png', '/assets/q_learning.png'];
         var loadedImages2 = [];
         var numImages2 = images2.length;
         var counter2 = 0;
@@ -222,26 +243,37 @@ permalink: /projects/
         });
     </script>
     <script>
-        var images4 = ['/assets/2dtile.gif', '/assets/mainmenu_example.png'];
-        var loadedImages4 = [];
-        var numImages4 = images4.length;
-        var counter4 = 1;
+        var images3 = ['/assets/digits.gif', '/assets/sin.gif', '/assets/langs.gif', '/assets/perceptron.png', '/assets/ml_rnn.png'];
+        var loadedImages3 = [];
+        var numImages3 = images3.length;
+        var counter3 = 0;
 
-        function preload4() {
-            for (var i = 0; i < numImages4; i++) {
-                loadedImages4[i] = new Image();
-                loadedImages4[i].src = images4[i];
+        function preload3() {
+            for (var i = 0; i < numImages3; i++) {
+                loadedImages3[i] = new Image();
+                loadedImages3[i].src = images3[i];
             }
         }
 
         $(document).ready(function () {
-            preload4();
+            preload3();
 
-            $('#project-image4').click(function () {
-                $('#project-image4').fadeOut(400, function () {
-                    $(this).attr('src', loadedImages4[counter4].src);
+            $('#project-image3').click(function (event) {
+                var halfWidth = $(this).width() / 2;
+                var clickX = event.clientX - $(this).offset().left;
+                if (clickX < halfWidth) {
+                    // if this is the first image, go to the last image
+                    if (counter3 == 0) {
+                        counter3 = numImages3 - 1;
+                    } else {
+                        counter3 = (counter3 - 1) % numImages3; // Go to the previous image
+                    }
+                } else {
+                    counter3 = (counter3 + 1) % numImages3; // Go to the next image
+                }
+                $('#project-image3').fadeOut(400, function () {
+                    $(this).attr('src', loadedImages3[counter3].src);
                     $(this).fadeIn(400);
-                    counter4 = (counter4 + 1) % numImages4;
                 });
             });
         });
