@@ -23,7 +23,8 @@
   {%- if site.linkedin_username -%}<li><a class="soc"
       href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"><svg class="svg-icon">
         <use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use>
-      </svg><span class="username" style="text-decoration: none;">{{ site.linkedin_username| escape }}</span></a></li>{%- endif -%}
+      </svg><span class="username" style="text-decoration: none;">{{ site.linkedin_username| escape }}</span></a></li>
+  {%- endif -%}
   {%- if site.pinterest_username -%}<li><a
       href="https://www.pinterest.com/{{ site.pinterest_username| cgi_escape | escape }}"><svg class="svg-icon">
         <use xlink:href="{{ '/assets/minima-social-icons.svg#pinterest' | relative_url }}"></use>
@@ -44,6 +45,10 @@
         class="svg-icon">
         <use xlink:href="{{ '/assets/minima-social-icons.svg#googleplus' | relative_url }}"></use>
       </svg> <span class="username">{{ site.googleplus_username| escape }}</span></a></li>{%- endif -%}
+  {%- if site.leetcode_username -%}<li><a class="soc"
+      href="https://leetcode.com/{{ site.leetcode_username| cgi_escape | escape}}"><svg class="svg-icon">
+        <use xlink:href="{{ '/assets/linkedin.svg' | relative_url }}"></use>
+      </svg><span class="username" style="text-decoration: none;">{{ site.leetcode_username| escape }}</span></a></li>{%-endif -%}
   {%- if site.rss -%}<li><a href="{{ 'feed.xml' | relative_url }}"><svg class="svg-icon">
         <use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
       </svg> <span>{{ site.rss | escape }}</span></a></li>{%- endif -%}
