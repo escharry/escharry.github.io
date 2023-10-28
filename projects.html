@@ -10,8 +10,8 @@ permalink: /projects/
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('#note, #proj1, #proj2, #proj3, #proj4, .hidden').each(function (hidden) {
-                $(this).delay(hidden * 200).fadeIn(200);
+            $('.hidden').each(function (hidden) {
+                $(this).delay(hidden * 150).fadeIn(150);
             });
         });
     </script>

@@ -11,6 +11,8 @@
   position: relative;
 }
 
+
+
 .site-title {
   @include relative-font-size(1.625);
   font-weight: 300;
@@ -443,6 +445,51 @@ body.dark {
     &:hover {
       color: #2c4660 !important; 
     }
+  }
+  
+  table {
+    margin-bottom: $spacing-unit;
+    text-align: $table-text-align;
+    color: lighten($text-color, 18%);
+    border-collapse: collapse;
+    border: 1px solid $grey-color-light;
+    tr {
+      &:nth-child(even) {
+        background-color: lighten($grey-color-light, 6%);
+      }
+    }
+    th, td {
+      padding: ($spacing-unit / 3) ($spacing-unit / 2);
+    }
+    th {
+      background-color: lighten($grey-color-light, 3%);
+      border: 1px solid darken($grey-color-light, 4%);
+      border-bottom-color: darken($grey-color-light, 12%);
+    }
+    td {
+      border: 1px solid $grey-color-light;
+      background-color: lighten($grey-color-light, 3%);
+    }
+  }
+
+  pre.highlight {
+    background-color: darken($grey-color-light, 82%);
+  }
+
+  code {
+    background-color: transparent;
+  }
+
+  span.n {
+    color: #CAD1D8;
+  }
+
+  span.k {
+    color: rgb(165, 136, 228);
+  }
+
+  span.nf {
+    color: rgb(106, 192, 226);
   }
 
   hr {
