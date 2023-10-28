@@ -1,4 +1,4 @@
-<!-- ---
+---
 layout: default
 title: Posts
 ---
@@ -10,4 +10,4 @@ title: Posts
       <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
-</ul> -->
+</ul>
