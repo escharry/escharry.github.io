@@ -10,17 +10,17 @@ Some of my course notes I've digitized.
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
     $(document).ready(function () {
-      $('div.hidden').fadeIn(500).removeClass('hidden');
-      $('div.calendar').fadeIn(500).removeClass('hidden');
-    });
-    $(document).ready(function () {
       var delay = 0; // Start delay counter at 0
       $('li').each(function () {
-        $(this).delay(delay).fadeIn(150); // Apply delay, then fade in
-        delay += 150; // Increment delay for next bullet
+        $(this).delay(delay).queue(function (next) {
+          $(this).fadeIn(150); // Apply fade in
+          next(); // Continue to next item in the queue
+        });
+        delay += 60; // Increment delay for next bullet
       });
     });
-  </script>
+    </script>
+    
   <script src="https://kit.fontawesome.com/f3a2794e84.js" crossorigin="anonymous"></script>
 </head>
 <style>

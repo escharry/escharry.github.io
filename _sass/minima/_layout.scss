@@ -472,22 +472,31 @@ body.dark {
     }
   }
 
-  pre.highlight {
-    background-color: darken($grey-color-light, 82%);
+  pre.highlight, pre.reveal {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0;
+    overflow: auto;
   }
 
+  pre {
+    background-color: darken($grey-color-light, 82%);
+    border: 1px solid darken($grey-color-light, 70%);
+    border-radius: 0;
+    overflow: auto;
+  }
   code {
     background-color: transparent;
   }
-
   span.n {
-    color: #CAD1D8;
+    color: #d8cdca;
   }
-
-  span.k {
+  span.k, span.k.reveal {
     color: rgb(165, 136, 228);
   }
-
+  code, code.reveal {
+    background-color: transparent;
+  }
   span.nf {
     color: rgb(106, 192, 226);
   }
