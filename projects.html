@@ -9,20 +9,20 @@ permalink: /projects/
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-      $(document).ready(function () {
-        var delay = 0; // Start delay counter at 0
-        $('.hidden').each(function () {
-          $(this).delay(delay).queue(function (next) {
-            $(this).fadeIn(250); // Apply fade in
-            next(); // Continue to next item in the queue
-          });
-          delay += 150; // Increment delay for next bullet
+        $(document).ready(function () {
+            var delay = 0; // Start delay counter at 0
+            $('.hidden').each(function () {
+                $(this).delay(delay).queue(function (next) {
+                    $(this).fadeIn(250); // Apply fade in
+                    next(); // Continue to next item in the queue
+                });
+                delay += 150; // Increment delay for next bullet
+            });
         });
-      });
-      </script>
-      
+    </script>
+
     <script src="https://kit.fontawesome.com/f3a2794e84.js" crossorigin="anonymous"></script>
-  </head>
+</head>
 
 <body class="other">
     <div class="hidden" id="note" style="display: none;">
@@ -40,7 +40,8 @@ permalink: /projects/
                        border-radius: 10px;" />
             <figcaption>
                 Command line version control system implementing essential features of Git. Handles the reading and
-                writing of files, viewing their histories, maintaining related branches of commits, and the merging of changes in one branch
+                writing of files, viewing their histories, maintaining related branches of commits, and the merging of
+                changes in one branch
                 to another.
                 <br>
                 <a target="_blank" class="spec" href="https://sp21.datastructur.es/materials/proj/proj2/proj2">
@@ -76,16 +77,40 @@ permalink: /projects/
         <img vspace="10">
     </div>
     <div class="hidden" id="proj3" style="display: none;">
+        <h1>Gameboxd</h1>
+        <figure>
+            <img id="project-image3" src='/assets/gameboxd.gif' alt='gameboxd' vspace="20" style="border-radius: 7px; 
+                       display: block;
+                       margin-left: auto;
+                       margin-right: auto;
+                       width: 100%;
+                       border-radius: 10px;" />
+            <figcaption>
+                A full-stack web application featuring user authentication, advanced search functionality, and a modern,
+                interactive user interface. The app integrates the IGDB API to fetch real-time game data, providing
+                users with up-to-date information.
+                <br>
+                <a target="_blank" class="spec" href="https://github.com/vincentAlexander15/gameboxd">
+                    GitHub &nbsp;<span class="arrow">&rsaquo;</span>
+                </a>
+            </figcaption>
+        </figure>
+        <hr>
+        <img vspace="10">
+    </div>
+    <div class="hidden" id="proj4" style="display: none;">
         <h1>Machine Learning Models</h1>
         <figure>
-            <img id="project-image3" src='/assets/digits.gif' alt='ml' vspace="20" style="border-radius: 7px; 
+            <img id="project-image4" src='/assets/digits.gif' alt='ml' vspace="20" style="border-radius: 7px; 
                        display: block;
                        margin-left: auto;
                        margin-right: auto;
                        width: 90%;
                        border-radius: 10px;" />
             <figcaption>
-                This project consisted of implementing the perceptron algorithm, neural network, and recurrent neural network models to approximate sinusoidal functions, recognize handwritten digits, and classify natural languages.
+                This project consisted of implementing the perceptron algorithm, neural network, and recurrent neural
+                network models to approximate sinusoidal functions, recognize handwritten digits, and classify natural
+                languages.
                 <br>
                 <a target="_blank" class="spec" href="https://inst.eecs.berkeley.edu/~cs188/sp23/projects/proj6/">
                     Spec &nbsp;<span class="arrow">&rsaquo;</span>
@@ -98,7 +123,7 @@ permalink: /projects/
     <div class="hidden" id="proj5" style="display: none;">
         <h1>2048</h1>
         <figure>
-            <img id="project-image" src='/assets/2048.gif' alt='2048' vspace="20" style="display: block;
+            <img id="project-image5" src='/assets/2048.gif' alt='2048' vspace="20" style="display: block;
                                 margin-left: auto;
                                 margin-right: auto;
                                 width: 50%;
@@ -120,14 +145,16 @@ permalink: /projects/
     <div class="hidden" id="proj6" style="display: none;">
         <h1>2D Tile World Generator</h1>
         <figure>
-            <img id="project-image" src='/assets/2dtile.gif' alt='2dtile' class="fadein" vspace="20" style="border-radius: 10px;
+            <img id="project-image6" src='/assets/2dtile.gif' alt='2dtile' class="fadein" vspace="20" style="border-radius: 10px;
                            display: block;
                            margin-left: auto;
                            margin-right: auto;
                            width: 90%;
                            border-radius: 10px;" />
             <figcaption>
-                Engine for generating random, expansive worlds in which the user is able to explore and interact. Worlds are generated using randomly positioned rooms and the connecting paths between them are made with A* search using Manhattan distance as a heuristic.
+                Engine for generating random, expansive worlds in which the user is able to explore and interact. Worlds
+                are generated using randomly positioned rooms and the connecting paths between them are made with A*
+                search using Manhattan distance as a heuristic.
                 <br>
                 <a target="_blank" class="spec" href="https://sp21.datastructur.es/materials/proj/proj3/proj3">
                     Spec &nbsp;<span class="arrow">&rsaquo;</span>
@@ -140,7 +167,7 @@ permalink: /projects/
     <div class="hidden" id="proj7" style="display: none;">
         <h1>SIXT33N: Voice Controlled Car</h1>
         <figure>
-            <img id="project-image" src='/assets/car.png' alt='car' class="fadein" vspace="20" style="border-radius: 10px;
+            <img id="project-image7" src='/assets/car.png' alt='car' class="fadein" vspace="20" style="border-radius: 10px;
                            display: block;
                            margin-left: auto;
                            margin-right: auto;
@@ -148,7 +175,8 @@ permalink: /projects/
                            border-radius: 10px;" />
             <figcaption>
                 Car that recognizes voice commands and reacts accordingly. Uses a Texas Instruments microcontroller and
-                microphone to record commands, filter noisy input, and implements a classifier based on singular value decomposition and principal component analysis to identify the vocal command issued.
+                microphone to record commands, filter noisy input, and implements a classifier based on singular value
+                decomposition and principal component analysis to identify the vocal command issued.
             </figcaption>
         </figure>
     </div>
@@ -260,7 +288,7 @@ permalink: /projects/
         $(document).ready(function () {
             preload3();
 
-            $('#project-image3').click(function (event) {
+            $('#project-image4').click(function (event) {
                 var halfWidth = $(this).width() / 2;
                 var clickX = event.clientX - $(this).offset().left;
                 if (clickX < halfWidth) {
@@ -273,7 +301,7 @@ permalink: /projects/
                 } else {
                     counter3 = (counter3 + 1) % numImages3; // Go to the next image
                 }
-                $('#project-image3').fadeOut(400, function () {
+                $('#project-image4').fadeOut(400, function () {
                     $(this).attr('src', loadedImages3[counter3].src);
                     $(this).fadeIn(400);
                 });
